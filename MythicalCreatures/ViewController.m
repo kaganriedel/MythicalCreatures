@@ -7,12 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "Creature.h"
-
+#import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 {
-    NSMutableArray *creaturesArray;
+    NSMutableArray *creatures;
     __weak IBOutlet UITextField *magicalCreatureTextField;
     
     __weak IBOutlet UITableView *creatureTableView;
@@ -26,17 +26,34 @@
 {
     [super viewDidLoad];
 
-    creaturesArray = [[NSMutableArray alloc]init];
+    creatures = [[NSMutableArray alloc]init];
     
-    Creature *creature;
-    creature = [[Creature alloc]init];
+    MagicalCreature *creature;
+    creature = [[MagicalCreature alloc]init];
     creature.name = @"Griffen";
-    [creaturesArray addObject:creature];
+    [creatures addObject:creature];
     
-    creature = [[Creature alloc]init];
-    creature.name = @"John";
-    [creaturesArray addObject:creature];
+    creature = [[MagicalCreature alloc]init];
+    creature.name = @"Hippogriff";
+    [creatures addObject:creature];
 
+    creature = [[MagicalCreature alloc]init];
+    creature.name = @"Dragon";
+    [creatures addObject:creature];
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    CreatureViewController *vc = segue.destinationViewController;
+    NSIndexPath *indexPath = [creatureTableView indexPathForSelectedRow];
+    vc.creature = creatures[indexPath.row];
+    
+    
+    
+ //   MagicalCreature *creatures = [MagicalCreature new];
+    
+    
 }
 
 - (IBAction)onAddButtonPressed:(id)sender
@@ -45,10 +62,10 @@
     NSString *trimmedString = [magicalCreatureTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if ([trimmedString isEqualToString:@""] == NO)
     {
-        Creature *creature = [Creature new];
+        MagicalCreature *creature = [MagicalCreature new];
         
         creature.name = magicalCreatureTextField.text;
-        [creaturesArray addObject:creature];
+        [creatures addObject:creature];
         
         magicalCreatureTextField.text = @"";
         
@@ -72,14 +89,14 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return creaturesArray.count;
+    return creatures.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreatureCellID"];
     
-    Creature *creature = [creaturesArray objectAtIndex:indexPath.row];
+    MagicalCreature *creature = [creatures objectAtIndex:indexPath.row];
     
     cell.textLabel.text = creature.name;
     
