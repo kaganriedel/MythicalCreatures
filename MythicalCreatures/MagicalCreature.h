@@ -11,5 +11,8 @@
 @interface MagicalCreature : NSObject
 
 @property NSString *name;
+@property NSString *description;
+@property UIImage *image;
+@property NSMutableArray *attributes;
 
 @end

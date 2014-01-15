@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AAAD30211885D4D4003EEEC6"
-               BuildableName = "MythicalCreatures.app"
-               BlueprintName = "MythicalCreatures"
-               ReferencedContainer = "container:MythicalCreatures.xcodeproj">
+               BuildableName = "MCMS.app"
+               BlueprintName = "MCMS"
+               ReferencedContainer = "container:MCMS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AAAD30421885D4D4003EEEC6"
-               BuildableName = "MythicalCreaturesTests.xctest"
-               BlueprintName = "MythicalCreaturesTests"
-               ReferencedContainer = "container:MythicalCreatures.xcodeproj">
+               BuildableName = "MCMSTests.xctest"
+               BlueprintName = "MCMSTests"
+               ReferencedContainer = "container:MCMS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAAD30211885D4D4003EEEC6"
-            BuildableName = "MythicalCreatures.app"
-            BlueprintName = "MythicalCreatures"
-            ReferencedContainer = "container:MythicalCreatures.xcodeproj">
+            BuildableName = "MCMS.app"
+            BlueprintName = "MCMS"
+            ReferencedContainer = "container:MCMS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAAD30211885D4D4003EEEC6"
-            BuildableName = "MythicalCreatures.app"
-            BlueprintName = "MythicalCreatures"
-            ReferencedContainer = "container:MythicalCreatures.xcodeproj">
+            BuildableName = "MCMS.app"
+            BlueprintName = "MCMS"
+            ReferencedContainer = "container:MCMS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAAD30211885D4D4003EEEC6"
-            BuildableName = "MythicalCreatures.app"
-            BlueprintName = "MythicalCreatures"
-            ReferencedContainer = "container:MythicalCreatures.xcodeproj">
+            BuildableName = "MCMS.app"
+            BlueprintName = "MCMS"
+            ReferencedContainer = "container:MCMS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
